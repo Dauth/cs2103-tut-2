@@ -105,10 +105,15 @@ public class CityConnect {
 	}
 
 	private static void run() {
-		System.out.print("Enter command:");
-		String commands = scanner.nextLine();
+		String commands = readCommand();
 		String feedback = executeCommand(commands);
 		showToUser(feedback);
+	}
+
+	private static String readCommand() {
+		System.out.print("Enter command:");
+		String userCommands = scanner.nextLine();
+		return userCommands;
 	}
 
 	/*
